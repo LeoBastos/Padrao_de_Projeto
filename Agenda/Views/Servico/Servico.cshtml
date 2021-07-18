@@ -1,0 +1,16 @@
+﻿@model Agenda.Service.Dto.ServicoDto
+<h1>AULAS COM DIGDIM</h1>
+
+<div class="container">
+    <form action="~/Servico/SubmitServico" method="post">
+        @Html.HiddenFor(i => i.Id)
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nome">Descrição do Serviço</label>
+                @Html.TextBoxFor(i => i.Descricao, new { Class = "form-control" })
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</div>
+

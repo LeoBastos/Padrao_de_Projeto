@@ -1,0 +1,40 @@
+﻿@model Agenda.Service.Dto.ClienteDto
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Cadastrar Cliente
+        </div>
+        <div class="card-body">
+            <form action="~/Cliente/SubmitCliente" method="post">
+                @Html.HiddenFor(i => i.Id)
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="nome">Nome Completo</label>
+                        @Html.TextBoxFor(i => i.Nome, new { Class = "form-control" })
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="email">Email</label>
+                        @Html.TextBoxFor(i => i.Email, new { Class = "form-control" })
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="telefone">Telefone</label>
+                        @Html.TextBoxFor(i => i.Telefone, new { Class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="cpf">Cpf</label>
+                        @Html.TextBoxFor(i => i.Cpf, new { Class = "form-control" })
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="datanascimento">Data Nascimento</label>
+                        @Html.TextBoxFor(i => i.DataNascimento, new { Class = "form-control", Type = "date" })
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+   
+</div>
+

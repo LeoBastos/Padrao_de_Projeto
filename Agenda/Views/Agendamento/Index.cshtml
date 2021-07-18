@@ -1,0 +1,43 @@
+﻿@model Agenda.Service.Dto.AgendamentoIndexDto
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <a href="~/Agendamento/NewAgendamento" class="btn btn-primary btn-icon-split btn-sm">
+        <span class="text">Cadastrar Agendamento </span>
+        <span>
+            <i class="fa fa-plus"></i>
+        </span>
+    </a>
+</div>
+
+<div container>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Serviço</th>
+                <th scope="col">Data Agendamento</th>
+                <th scope="col">Horario Inicio</th>
+                <th scope="col">Horario Fim</th>
+                <th scope="col">Forma de Pagamento</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Agendamentos)
+            {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Cliente</td>
+                <td>@item.Servico</td>
+                <td>@item.DataAgendamento</td>
+                <td>@item.Inicio</td>
+                <td>@item.Fim</td>
+                <td>@item.FormaDePagamento</td>
+                <td>@item.Finalizado</td>               
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

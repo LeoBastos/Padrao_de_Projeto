@@ -1,0 +1,62 @@
+﻿@model Agenda.Service.Dto.ClienteDto
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Informação do Cliente
+        </div>
+        <div class="card-body">
+            <div class="form-group col-md-12">
+                <div class="form-row">
+                    <div class="form-group col-md-4 mb-1">
+                        <label class="text-muted mb-1"><small>Nome do Cliente:</small></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user-o"></i></span>
+                            </div>
+                            @Html.TextBoxFor(i => i.Nome, new { @class = "form-control form-control-sm", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4 mb-1">
+                        <label class="text-muted mb-1"><small>Email</small></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-envelope-o"></i></span>
+                            </div>
+                            @Html.TextBoxFor(i => i.Email, new { @class = "form-control form-control-sm", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4 mb-1">
+                        <label class="text-muted mb-1"><small>Telefone</small></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                            </div>
+                            @Html.TextBoxFor(i => i.Telefone, new { @class = "form-control form-control-sm", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4 mb-1">
+                        <label class="text-muted mb-1"><small>CPF</small></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-id-card-o"></i></span>
+                            </div>
+                            @Html.TextBoxFor(i => i.Cpf, new { @class = "form-control form-control-sm", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4 mb-1">
+                        <label class="text-muted mb-1"><small>Data de Nascimento</small></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-calendar-check-o"></i></span>
+                            </div>
+                            @Html.TextBoxFor(i => i.DataNascimento, new { @class = "form-control form-control-sm", @readonly = true })
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+    </div>
+</div>
